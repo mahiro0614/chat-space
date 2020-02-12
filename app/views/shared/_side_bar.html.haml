@@ -1,0 +1,18 @@
+.side-bar
+  .side-bar__header
+    .side-bar__header__box
+      %p.side-bar__header__box__name-box
+        user
+      %ul.side-bar__header__box__menu-box
+        %li.side-bar__header__box__menu-box__edit-box
+          =link_to "#" do
+            = icon('fas', 'edit')
+        %li.side-bar__header__box__menu-box__giar-box
+          =link_to "#" do
+            = icon('fas', 'cog')
+  .groups
+    =link_to "#" ,class: "group" do
+      %p.group__grou-name グループ名
+      %p.group__latest-message まだ目セージがありません
+
+    

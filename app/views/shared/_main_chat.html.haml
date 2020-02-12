@@ -1,0 +1,37 @@
+
+.chat-main
+  .chat-main__header
+    %h2.chat-main__header__left-box
+      groupA
+      %ul.chat-main__header__left-box__current-group
+        Member:
+        %li.chat-main__header__left-box__menmber-list
+        %li.chat-main__header__left-box__menmber-list__member-name
+          石原さとみ
+    .chat-main__header__edit-btn
+      Edit
+  .chat-main__messages
+    .chat-main__messages__message
+      .chat-main__messages__message__upper-info
+        %p.chat-main__messages__message__upper-info__talker
+          石原さとみ
+        %p.chat-main__messages__message__upper-info__date
+          2019/2/11/12:00
+      %p.chat-main__messages__message__text
+        ボボボーボ・ボーボボ
+    .chat-main__messages__message
+      .chat-main__messages__message__upper-info
+        %p.chat-main__messages__message__upper-info__talker
+          新垣結衣
+        %p.chat-main__messages__message__upper-info__date
+          2019/2/11/12:30
+      %p.chat-main__messages__message__text
+        アッチョンプリケ
+  .chat-main__form
+    %form.new_message
+      .input-box
+        %input{type:"text", class:"input-box__text", placeholder:"type a message"}
+        %label{class:"input-box__image"}
+          =icon('fas', 'image')
+          %input{type:"file", class:"input-box__image__file"}
+      %input{type:"submit", class:"submit-btn",value:"send"}
