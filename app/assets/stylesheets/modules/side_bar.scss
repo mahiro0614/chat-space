@@ -1,0 +1,63 @@
+.side-bar {
+  width: 300px;
+  height: 100vh;
+  background-color: #253141;
+  float: left;
+  color: #ffffff;
+  font-weight: bold;
+  a, a:hover, a:visited{
+    color:white;
+    text-decoration: none;
+  }
+  &__header {
+    height: 100px;
+    width: 300px;
+    padding: 0 20px;
+    display: flex;
+    
+    align-items: center;
+    &__box{
+      line-height: 20px;
+      justify-content: space-between;
+      display: flex;
+      height: 20px;
+      width: 260px;
+      list-style: none;
+      &__name-box{
+        height: 20px;
+        margin-right: 5px;
+      }
+      &__menu-box{
+        height: 20px;
+        display: flex;
+        &__edit-box{
+          margin-right: 5px;
+        }
+        &__cog-box{
+          color: white;
+        }
+      }
+    }
+  }
+
+  
+  .groups {
+    height:calc(100vh - 100px);
+    padding: 20px 20px 0;
+    background-color: #2f3e51;
+    .group{
+      color: white;
+      text-decoration: none;
+      margin-bottom: 40px;
+      &__group-name{
+        font-size: 15px;
+        color: white;
+        margin-bottom: 5px;
+      }
+      &__latest-message{
+        font-size: 11px;
+        color: white;
+      }
+    }
+  }
+}
