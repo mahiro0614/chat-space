@@ -1,22 +1,32 @@
 $(function(){
     function buildHTML(message){
-
-      if ( message.image ) {
-        var html = 
-         `<div class="chat-main__messages__message">
-          <div class="chat-main__messages__message__upper-info">
-            <p class="chat-main__messages__message__upper-info__talker">
-              ${message.user_name}
-            </p>
-            <p class="chat-main__messages__message__upper-info__date">
-              ${message.created_at}
-            </p>
-          </div>
-          <p class="chat-main__messages__message__text">
-          </p>
-          <img src=${message.image}>
-         </div>`
+      
       if (message.text && message.image) {
+        var html = `<div class="message" data-message-id=` + message.id + `>` +
+         `<div class="chat-main__messages__message">` +
+          `<div class="chat-main__messages__message__upper-info">` + 
+            `<p class="chat-main__messages__message__upper-info__talker">` +
+              message.user_name +
+            `</p>` +
+            `<p class="chat-main__messages__message__upper-info__date">` +
+              message.created_at +
+           `</p>` +
+          `</div>` +
+          `<p class="chat-main__messages__message__text">` +
+            message.text +
+          `</p>` +
+          `<img src="` + message.image + `" >` +
+         `</div>`
+        return html;
+      } else if (message.text) {
+        var html = `<div class="message" data-message-id=` + message.id + `>` +
+         `<div class="chat-main__messages__message">` +
+          `<div class="chat-main__messages__message__upper-info">` +
+            `<p class="chat-main__messages__message__upper-info__talker">` +
+              message.user_name +
+            `</p>` +
+            `<p class="chat-main__messages__message__upper-info__date">` +
+              message.created_at +
             `</p>` +
           `</div>` +
           `<p class="chat-main__messages__message__text">` +
