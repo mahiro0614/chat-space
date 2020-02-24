@@ -73,23 +73,26 @@
     background-color: #d2d2d2;
     padding: 20px 40px;
     display: flex;
-  }
-  .new_message#new_message{
-    display: flex;
-    width: 100%;
-    
-    .new_message__text{
+    position: relative;
+    .new_message#new_message{
+      display: flex;
       width: 100%;
-      position: relative;
-    }
-    .form__new_message__image{
-      position: absolute;
-      right: 155px;
-      bottom: 35px;
-    }
-    .new_message__image__file {
-      display: none;
-    }
+      
+      .new_message__text{
+        width: 100%;
+        
+      }
+      .form__new_message__image{
+        position: absolute;
+        right: 155px;
+        bottom: 35px;
+        .new_message__image__file {
+          display: none;
+        }
+      }
+  }
+  
+    
     
   }
   .submit-btn{
