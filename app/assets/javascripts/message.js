@@ -2,51 +2,51 @@ $(function(){
     function buildHTML(message){
       
       if (message.text && message.image) {
-        var html = `<div class="message" data-message-id=` + message.id + `>` +
-         `<div class="chat-main__messages__message">` +
-          `<div class="chat-main__messages__message__upper-info">` + 
-            `<p class="chat-main__messages__message__upper-info__talker">` +
-              message.user_name +
-            `</p>` +
-            `<p class="chat-main__messages__message__upper-info__date">` +
-              message.created_at +
-           `</p>` +
-          `</div>` +
-          `<p class="chat-main__messages__message__text">` +
-            message.text +
-          `</p>` +
-          `<img src="` + message.image + `" >` +
-         `</div>`
+        var html = `<div class="message" data-message-id= ${message.id} >
+         <div class="chat-main__messages__message">
+          <div class="chat-main__messages__message__upper-info">
+            <p class="chat-main__messages__message__upper-info__talker">
+              ${message.user_name} 
+            </p>
+            <p class="chat-main__messages__message__upper-info__date">
+              ${message.created_at}
+           </p>
+          </div>
+          <p class="chat-main__messages__message__text">
+            ${message.text} 
+          </p>
+          <img src=" ${message.image} " >
+         </div>`
         return html;
       } else if (message.text) {
-        var html = `<div class="message" data-message-id=` + message.id + `>` +
-         `<div class="chat-main__messages__message">` +
-          `<div class="chat-main__messages__message__upper-info">` +
-            `<p class="chat-main__messages__message__upper-info__talker">` +
-              message.user_name +
-            `</p>` +
-            `<p class="chat-main__messages__message__upper-info__date">` +
-              message.created_at +
-            `</p>` +
-          `</div>` +
-          `<p class="chat-main__messages__message__text">` +
-            message.text +
-          `</p>` +
-         `</div>`;
+        var html = `<div class="message" data-message-id= ${message.id} >
+         <div class="chat-main__messages__message">
+          <div class="chat-main__messages__message__upper-info">
+            <p class="chat-main__messages__message__upper-info__talker">
+              ${message.user_name} 
+            </p>
+            <p class="chat-main__messages__message__upper-info__date">
+              ${message.created_at}
+           </p>
+          </div>
+          <p class="chat-main__messages__message__text">
+            ${message.text} 
+          </p>
+         </div>`
         return html;
       } else if (message.image) {
-        var html = `<div class="message" data-message-id=` + message.id + `>` +
-         `<div class="chat-main__messages__message">` +
-          `<div class="chat-main__messages__message__upper-info">` + 
-            `<p class="chat-main__messages__message__upper-info__talker">` +
-              message.user_name +
-            `</p>` +
-            `<p class="chat-main__messages__message__upper-info__date">` +
-              message.created_at +
-           `</p>` +
-          `</div>` +
-          `<img src="` + message.image + `" >` +
-         `</div>`
+        var html = `<div class="message" data-message-id= ${message.id} >
+         <div class="chat-main__messages__message">
+          <div class="chat-main__messages__message__upper-info">
+            <p class="chat-main__messages__message__upper-info__talker">
+              ${message.user_name} 
+            </p>
+            <p class="chat-main__messages__message__upper-info__date">
+              ${message.created_at}
+           </p>
+          </div>
+          <img src=" ${message.image} " >
+         </div>`
         return html;
       };
     }
@@ -64,7 +64,6 @@ $(function(){
         contentType: false
       })
        .done(function(data){
-         console.log(data.image)
          var html = buildHTML(data);
          $('.chat-main__messages').append(html);      
          $('form')[0].reset();
