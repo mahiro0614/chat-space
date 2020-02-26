@@ -1,4 +1,5 @@
 .account-page {
+  
   .account-page__inner {
     width: 980px;
     margin: 60px auto;
@@ -6,9 +7,13 @@
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
+    display: flex;
 
-    .account-page__inner--left, .account-page__inner--right {
+    .account-page__inner--left {
       float: left;
+      width: 50%;
+    }
+    .account-page__inner--right{
       width: 50%;
     }
     &:after {
