@@ -1,9 +1,9 @@
 class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
 
-  storage :file
-
   process convert: 'jpg'
+
+  storage :fog
 
   # 保存するディレクトリ名
   def store_dir
